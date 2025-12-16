@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* --- Dark Mode Fix for Tailwind v4 --- */
+/* Ye line Tailwind ko batati hai ki jab 'dark' class mile tab dark mode on karna */
+@variant dark (&:where(.dark, .dark *));
+
+/* --- Global Styles --- */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 20px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #475569;
+}
