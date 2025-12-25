@@ -16,10 +16,26 @@ export default function Footer() {
                 <div className="max-w-[1320px] mx-auto px-4 py-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  cursor-pointer ">
 
-                        <FeatureItem icon={<FaTruck className="text-3xl text-indigo-600" />} title="Free Shipping" desc="On all orders over ₹500" />
-                        <FeatureItem icon={<FaHeadset className="text-3xl text-indigo-600" />} title="24/7 Support" desc="Contact us anytime" />
-                        <FeatureItem icon={<FaWallet className="text-3xl text-indigo-600" />} title="Secure Payment" desc="100% protected payment" />
-                        <FeatureItem icon={<FaShieldAlt className="text-3xl text-indigo-600" />} title="Money Back" desc="30 days guarantee" />
+                        <FeatureItem
+                            icon={<FaTruck className="text-3xl text-indigo-600" />}
+                            title="Free Shipping"
+                            desc="On all orders over ₹500"
+                        />
+                        <FeatureItem
+                            icon={<FaHeadset className="text-3xl text-indigo-600" />}
+                            title="24/7 Support"
+                            desc="Contact us anytime"
+                        />
+                        <FeatureItem
+                            icon={<FaWallet className="text-3xl text-indigo-600" />}
+                            title="Secure Payment"
+                            desc="100% protected payment"
+                        />
+                        <FeatureItem
+                            icon={<FaShieldAlt className="text-3xl text-indigo-600" />}
+                            title="Money Back"
+                            desc="30 days guarantee"
+                        />
 
                     </div>
                 </div>
@@ -109,7 +125,7 @@ export default function Footer() {
             <div className="bg-gray-100 dark:bg-gray-900 py-6 border-t border-gray-200 dark:border-gray-800">
                 <div className="max-w-[1320px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-500 dark:text-gray-400 text-center md:text-left">
-                        © {new Date().getFullYear()} Maashho. All Rights Reserved. Designed by <a href="https://github.com/ramkachhwaha" className="text-indigo-600 hover:text-indigo-500">Raam </a>.
+                        © {new Date().getFullYear()} Maashho. All Rights Reserved. Designed by <a href="https://github.com/ramkachhwaha" className="text-indigo-600 hover:text-indigo-400">Raam </a>.
                     </p>
 
                     <div className="flex gap-4 text-2xl text-gray-400 dark:text-gray-500 cursor-pointer">
@@ -144,7 +160,9 @@ function FeatureItem({ icon, title, desc }) {
 function FooterLink({ text }) {
     return (
         <li>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:pl-2 transition-all duration-300 inline-block">
+            <a
+                href="#"
+                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:pl-2 transition-all duration-300 inline-block">
                 {text}
             </a>
         </li>
@@ -153,7 +171,9 @@ function FooterLink({ text }) {
 
 function SocialIcon({ icon }) {
     return (
-        <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all duration-300">
+        <a
+            href="#"
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all duration-300">
             {icon}
         </a>
     )

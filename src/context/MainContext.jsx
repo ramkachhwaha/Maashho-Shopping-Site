@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify"; // Notification ke liye
 
 export let cartContent = createContext();
@@ -30,12 +30,12 @@ export default function MainContext({ children }) {
   }, [theme]);
 
   // --- Functions ---
-  
-  // Add to Cart (Smart Logic)
+
+  // Add to Cart (with quantity management) 
   let addToCart = (product) => {
     let exist = cart.find((item) => item.id === product.id);
     if (exist) {
-      // Agar pehle se hai, to quantity badhao
+      // Quantity update 
       setCart(
         cart.map((item) =>
           item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item
@@ -43,7 +43,7 @@ export default function MainContext({ children }) {
       );
       toast.info("Quantity updated in cart!");
     } else {
-      // Naya item add karo
+      // New product add 
       setCart([...cart, { ...product, qty: 1 }]);
       toast.success("Added to Cart!");
     }
@@ -60,8 +60,8 @@ export default function MainContext({ children }) {
     setCart(
       cart.map((item) => {
         if (item.id === id) {
-            if(type === 'plus') return { ...item, qty: item.qty + 1 }
-            if(type === 'minus' && item.qty > 1) return { ...item, qty: item.qty - 1 }
+          if (type === 'plus') return { ...item, qty: item.qty + 1 }
+          if (type === 'minus' && item.qty > 1) return { ...item, qty: item.qty - 1 }
         }
         return item;
       })

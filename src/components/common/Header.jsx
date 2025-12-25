@@ -8,7 +8,6 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg shadow-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-            {/* Baaki code same rahega... */}
             <div className="max-w-[1320px] mx-auto flex justify-between items-center p-4">
 
                 {/* Logo */}
@@ -26,14 +25,18 @@ export default function Header() {
                     </button>
 
                     {/* Cart Icon */}
-                    <Link to="/cart" className="relative text-2xl text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition-colors">
+                    <Link to="/cart"
+                        className="relative text-2xl text-gray-700 dark:text-gray-200 hover:text-indigo-600 transition-colors">
                         <FaShoppingCart />
                         {cartCount > 0 && (
-                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[12px] font-bold h-5 w-5 flex items-center justify-center rounded-full shadow-md animate-bounce">
+                            <span
+                                className="absolute -top-2 -right-2 bg-red-500 text-white text-[12px] font-bold h-5 w-5 flex items-center justify-center rounded-full shadow-md animate-bounce"
+                            >
                                 {cartCount}
                             </span>
                         )}
                     </Link>
+
                 </div>
             </div>
         </header>

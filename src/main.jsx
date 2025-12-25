@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <MainContext>
+
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
@@ -20,8 +21,10 @@ createRoot(document.getElementById('root')).render(
           </Route>
         </Routes>
       </BrowserRouter>
+
       {/* Global Notification Container */}
       <ToastContainer position="bottom-right" autoClose={2000} />
+
     </MainContext>
   </StrictMode>,
 )

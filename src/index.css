@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* --- Dark Mode Fix for Tailwind v4 --- */
-/* Ye line Tailwind ko batati hai ki jab 'dark' class mile tab dark mode on karna */
+/* --- Dark Mode Fix for  --- */
 @variant dark (&:where(.dark, .dark *));
 
 /* --- Global Styles --- */
