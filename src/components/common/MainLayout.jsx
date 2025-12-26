@@ -13,6 +13,7 @@ export default function MainLayout() {
 
       {/* Main Content */}
       <main className="grow w-full">
+
         <div className="min-h-[calc(100vh-100px)]">
           <Outlet />
         </div>
