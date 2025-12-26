@@ -47,7 +47,6 @@ export default function Home() {
           ? [...prev, e.target.value]
           : prev.filter((v) => v !== e.target.value)
       );
-
     } else {
       let filterData = categoryFilter.filter((v) => v !== e.target.value);
       setCategoryFilter(filterData);
