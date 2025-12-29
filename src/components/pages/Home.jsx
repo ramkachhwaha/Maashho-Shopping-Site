@@ -181,8 +181,8 @@ export default function Home() {
     </>
   );
 }
-
-// Prodact Card Compnent
+ 
+// Product Card Component
 function ProductCard({ data }) {
   let { addToCart } = useContext(cartContent);
   let { name, image, price } = data;
